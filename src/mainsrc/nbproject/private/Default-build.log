@@ -1,0 +1,28 @@
+g++ -g -I. -I../libst/include -Iglew/include -o main.o -c main.cpp
+(cd ../libst; /usr/bin/make)
+make[1]: Entering directory `/home/pj/Desktop/Fall_2015/proj1_mesh/src/libst'
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STColor3f.o -c STColor3f.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STColor4f.o -c STColor4f.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STColor4ub.o -c STColor4ub.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STFont.o -c STFont.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STImage.o -c STImage.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STImage_jpeg.o -c STImage_jpeg.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STImage_png.o -c STImage_png.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STImage_ppm.o -c STImage_ppm.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STPoint2.o -c STPoint2.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STPoint3.o -c STPoint3.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STJoystick.o -c STJoystick.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STMatrix4.o -c STMatrix4.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STShaderProgram.o -c STShaderProgram.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STShape.o -c STShape.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STTexture.o -c STTexture.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STTimer.o -c STTimer.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STVector2.o -c STVector2.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STVector3.o -c STVector3.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STTriangleMesh.o -c STTriangleMesh.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o tiny_obj_loader.o -c tiny_obj_loader.cpp
+g++ -g -I. -Iinclude -I/usr/include -Iext/glew/include -Iext/freetype/include  -o STJoystick_linux.o -c STJoystick_linux.cpp
+ar -rc lib/libst.a STColor3f.o STColor4f.o STColor4ub.o STFont.o STImage.o STImage_jpeg.o STImage_png.o STImage_ppm.o STPoint2.o STPoint3.o STJoystick.o STMatrix4.o STShaderProgram.o STShape.o STTexture.o STTimer.o STVector2.o STVector3.o STTriangleMesh.o tiny_obj_loader.o STJoystick_linux.o 
+ranlib lib/libst.a
+make[1]: Leaving directory `/home/pj/Desktop/Fall_2015/proj1_mesh/src/libst'
+g++ -o prog1_mesh main.o  -L../libst/lib -L/usr/lib64 -L/usr/lib -Lglew/lib -lst -lpng -ljpeg -lglut -lGL -lGLU -lGLEW 
